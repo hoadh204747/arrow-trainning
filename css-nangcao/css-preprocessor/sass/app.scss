@@ -1,0 +1,14 @@
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$h3: red;
+$fontsize: 18px;
+
+/* Use the variables */
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+   h3{
+    color: $h3;
+   }
+}

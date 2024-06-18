@@ -1,0 +1,32 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s; /* thời gian của 1 animation */
+    animation-delay: 2s; /* độ trễ trước khi bắt đầu */
+    animation-iteration-count: 3; /* chỉ định số lần animatiom sẽ chạy */
+    animation-direction: reverse; /* chỉ định hướng của animation */
+    animation-direction: alternate;
+    animation-direction: alternate-reverse;
+  }
+  
+  /* @keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  } */
+
+  /* @keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  } */
+  
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }

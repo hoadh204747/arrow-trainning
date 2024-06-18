@@ -1,0 +1,54 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+
+  /* Grid area */
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto; /* chỉ định số lượng và độ rộng các cột trong grid */
+    grid-gap: 10px; /* khoảng cách giữa các hàng và cột*/
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  
+  .item1 {
+    grid-area: 2 / 1 / span 2 / span 3; /*bắt đầu ở hàng 2 cột 1 và trải dài 2 hàng 3 cột*/
+  }
+
+/* grid-template-areas */
+  .item1 {
+    grid-area: myArea;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas: 'myArea myArea . . .';
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }

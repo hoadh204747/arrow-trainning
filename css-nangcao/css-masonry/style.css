@@ -1,0 +1,11 @@
+.container{
+    width: 1000px;
+    columns: 4;
+}
+
+.container div{
+    margin: 5px;
+    text-align: center;
+
+    font-size: 30px;
+}
