@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import AttributeBiding from './components/AttributeBiding.vue'
+import ConditionalRendering from './components/ConditionalRendering.vue'
 
 </script>
 
@@ -20,9 +21,12 @@ import AttributeBiding from './components/AttributeBiding.vue'
   </header>
 
   <RouterView /> -->
-  
-  <AttributeBiding />
-  
+
+  <div>
+    <AttributeBiding />
+    <ConditionalRendering />
+  </div>
+
 </template>
 
 <style scoped>
