@@ -14,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <nav>
         <RouterLink to="/">AttributeBiding & ConditionalRendering</RouterLink>
         <RouterLink to="/list-rendering">List Rendering</RouterLink>
+        <RouterLink to="/life-cycle">Life Cycle</RouterLink>
       </nav>
     </div>
   </header>

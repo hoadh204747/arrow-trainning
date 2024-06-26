@@ -1,6 +1,19 @@
 <script setup>
-    defineProps(['name'])
-    defineEmits(['remove'])
+import { defineProps, defineEmits, onBeforeUnmount, onUnmounted } from 'vue';
+
+const props = defineProps(['name']);
+const emit = defineEmits(['remove']);
+
+
+    onBeforeUnmount(() => {
+        console.log('before unmount')
+        alert(`Component with name "${props.name}" is about to be removed.`);
+    })
+
+    onUnmounted(() => {
+        console.log('unmount')
+        alert(`Component with name "${props.name}" has been removed.`)
+    })
 </script>
 <template>
     <div>

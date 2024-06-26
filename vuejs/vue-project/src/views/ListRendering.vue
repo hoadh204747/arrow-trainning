@@ -1,13 +1,16 @@
 <script setup>
-    import {computed, ref, watch} from 'vue'
+    import {computed, ref, watch,  onMounted} from 'vue'
     import TodoItem from '../components/TodoItem.vue'
 
     const feedbackText=ref('')
     const newTodo = ref('')
     let todoId = 0
-    const todos = ref([
+    const todos = ref([])
+    const inp = ref(null)
 
-    ])
+    onMounted(() => {
+        inp.value.focus()
+    })
 
     watch(newTodo,  (value) => {
         if(value === ''){
@@ -44,6 +47,7 @@
             v-model="newTodo"
             id="new-todo"
             placeholder="email..."
+            ref="inp"
         >
         <button>Add</button>
     </form>
@@ -59,7 +63,7 @@
     </ul>
     <span>{{ feedbackText }}</span>
     <span>{{ computedTodo }}</span>
-</template>
+</template> 
 
 <style lang="scss" scoped>
 
