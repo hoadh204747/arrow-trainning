@@ -3,7 +3,7 @@
         <h1>Life Cycle</h1>
         <span>{{ text }}</span>
         <p ref="pEl" id="pEl">try to access this text from the 'beforeMount' hook</p>
-        <input v-model="text" placeholder="Type something...">
+        <!-- <input v-model="text" placeholder="Type something..."> -->
 
     </div>
 </template>

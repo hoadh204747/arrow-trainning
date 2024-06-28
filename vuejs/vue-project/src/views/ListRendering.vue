@@ -1,5 +1,5 @@
 <script setup>
-    import {computed, ref, watch,  onMounted} from 'vue'
+    import {computed, ref, watch,  onMounted, watchEffect} from 'vue'
     import TodoItem from '../components/TodoItem.vue'
 
     const feedbackText=ref('')
@@ -12,10 +12,20 @@
         inp.value.focus()
     })
 
-    watch(newTodo,  (value) => {
-        if(value === ''){
+    // watch(newTodo,  (value) => {
+    //     if(value === ''){
+    //         feedbackText.value = ''
+    //     } else if(!value.includes('@'))  {
+    //         feedbackText.value = 'Please enter a valid email'
+    //     } else {
+    //         feedbackText.value = 'okkkkkk'
+    //     }
+    // })
+
+    watchEffect(() => {
+        if(newTodo.value === ''){
             feedbackText.value = ''
-        } else if(!value.includes('@'))  {
+        } else if(!newTodo.value.includes('@'))  {
             feedbackText.value = 'Please enter a valid email'
         } else {
             feedbackText.value = 'okkkkkk'

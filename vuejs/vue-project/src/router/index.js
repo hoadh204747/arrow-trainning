@@ -9,7 +9,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'AttributeBiding-ConditionalRending',
-      component: AtrributeConditinalView
+      component: AtrributeConditinalView,
     },
     {
       path: '/list-rendering',
@@ -20,6 +20,16 @@ const router = createRouter({
       path: '/life-cycle',
       name: 'Life cycle',
       component: LifeCycle
+    },
+    {
+      path:'/users',
+      name:'Users',
+      component:()=>import('../views/Users.vue')
+    },
+    {
+      path:'/users/:id',
+      name:'UserDetail',
+      component:()=>import('../views/UserDetail.vue')
     }
   ]
 })
