@@ -1,6 +1,6 @@
 const db = require('../models/index')
 
-const createBook = async (newBook) => {
+const createBook = (newBook) => {
     return new Promise(async (resolve, reject) => {
         const {name, author, price} = newBook;
         try{
@@ -14,7 +14,7 @@ const createBook = async (newBook) => {
     })
 }
 
-const getAllBooks = async () => {
+const getAllBooks = () => {
     return new Promise(async (resolve, reject) => {
         try{
             const books = await db.Book.findAll()
